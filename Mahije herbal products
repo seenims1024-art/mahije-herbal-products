@@ -1,0 +1,124 @@
+import React from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { motion } from "framer-motion";
+
+export default function MahijeWebsite() { return ( <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white text-gray-800"> {/* HERO SECTION /} <section className="px-6 py-16 text-center max-w-6xl mx-auto"> {/ LOGO */} <img
+src="/logo.png"
+alt="Mahije Herbal Products Logo"
+className="mx-auto w-28 mb-6"
+/>
+
+<motion.h1
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="text-4xl md:text-6xl font-bold text-purple-800"
+    >
+      MAHIJE Herbal Products
+    </motion.h1>
+
+    <p className="mt-4 text-lg text-gray-600">
+      Pure • Natural • Homemade Herbal Care for Your Family
+    </p>
+
+    <p className="mt-2 text-md text-gray-500">
+      இயற்கை மூலிகை பராமரிப்பு – குழந்தைகள் முதல் பெரியவர்கள் வரை
+    </p>
+
+    <div className="mt-6">
+      <a href="https://wa.me/919159964910" target="_blank">
+        <Button className="rounded-2xl px-6 py-3 text-lg">
+          Order on WhatsApp
+        </Button>
+      </a>
+    </div>
+  </section>
+
+  {/* PRODUCTS SECTION */}
+  <section className="px-6 py-12 bg-white">
+    <h2 className="text-3xl font-semibold text-center text-purple-700 mb-10">
+      Our Products / எங்கள் தயாரிப்புகள்
+    </h2>
+    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <Card className="rounded-2xl shadow-md">
+        <CardContent className="p-6 text-center">
+          <h3 className="text-2xl font-semibold">Herbal Hair Oil</h3>
+          <p className="mt-3 text-gray-600">
+            Nourishes hair roots, reduces hair fall, and promotes natural
+            growth using traditional herbal ingredients.
+          </p>
+          <p className="mt-2 text-gray-500">
+            முடி உதிர்வை குறைத்து இயற்கையாக முடி வளர உதவும்.
+          </p>
+          <Button className="mt-4">View Details</Button>
+        </CardContent>
+      </Card>
+
+      <Card className="rounded-2xl shadow-md">
+        <CardContent className="p-6 text-center">
+          <h3 className="text-2xl font-semibold">Herbal Bathing Powder</h3>
+          <p className="mt-3 text-gray-600">
+            Gentle skin care made with 16 natural ingredients. Safe for
+            newborns to elders.
+          </p>
+          <p className="mt-2 text-gray-500">
+            16 மூலிகைகளால் தயாரிக்கப்பட்ட மென்மையான தோல் பராமரிப்பு.
+          </p>
+          <Button className="mt-4">View Details</Button>
+        </CardContent>
+      </Card>
+    </div>
+  </section>
+
+  {/* ABOUT SECTION */}
+  <section className="px-6 py-16 bg-purple-50 text-center">
+    <h2 className="text-3xl font-semibold text-purple-800">About Us / எங்களை பற்றி</h2>
+    <p className="mt-6 max-w-3xl mx-auto text-gray-700 leading-relaxed">
+      MAHIJE Herbal Products focuses on traditional herbal wellness made
+      with care and purity. Our products are handmade using natural
+      ingredients to support healthy hair and skin for all age groups.
+    </p>
+    <p className="mt-4 max-w-3xl mx-auto text-gray-600">
+      இயற்கை மூலிகைகளை பயன்படுத்தி வீட்டிலேயே தயாரிக்கப்படும் ஆரோக்கியமான
+      அழகு பராமரிப்பு தயாரிப்புகள்.
+    </p>
+  </section>
+
+  {/* TESTIMONIALS */}
+  <section className="px-6 py-12 bg-white">
+    <h2 className="text-3xl font-semibold text-center text-purple-700 mb-10">
+      Customer Reviews
+    </h2>
+    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {["Very good herbal product!", "Hair fall reduced a lot.", "Skin feels soft and natural."].map((review, i) => (
+        <Card key={i} className="rounded-2xl shadow">
+          <CardContent className="p-6">
+            <p className="text-gray-700">"{review}"</p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
+
+  {/* CONTACT SECTION */}
+  <section className="px-6 py-16 bg-purple-800 text-white text-center">
+    <h2 className="text-3xl font-semibold">Contact Us</h2>
+    <p className="mt-4">
+      Mahije Beauty Bridal Studio, Near ZKM Hr. Sec. School, Ayyappa Flex
+      Upstairs, Bodinayakanur, Theni District – 625513
+    </p>
+    <p className="mt-2">Phone & WhatsApp: 9159964910</p>
+    <div className="mt-6">
+      <a href="https://wa.me/919159964910" target="_blank">
+        <Button className="bg-white text-purple-800 rounded-2xl">
+          Chat on WhatsApp
+        </Button>
+      </a>
+    </div>
+  </section>
+
+  {/* FOOTER */}
+  <footer className="text-center py-6 text-sm text-gray-500">
+    © {new Date().getFullYear()} MAHIJE Herbal Products. All rights reserved.
+  </footer>
+</div>
+
+); }
